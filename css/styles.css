@@ -56,6 +56,8 @@ p {
 
 .header .logo {
     margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .logo {
@@ -137,8 +139,7 @@ p {
 
 .footer .logo,
 .footer-location,
-.footer-mail,
-.advantages .list {
+.footer-mail{
     display: block;
 }
 
@@ -196,9 +197,18 @@ p {
 }
 
 .hero-btn {
-    padding: 10px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 216px;
+    height: 50px;
+
     border-radius: 4px;
     border: none;
+
+    margin-left: auto;
+    margin-right: auto;
 
     font-family: inherit;
     cursor: pointer;
@@ -245,17 +255,12 @@ p {
 .about .list,
 .staff .list {
     display: flex;
+    gap: 30px;
 }
 
 .advantages-unit,
 .staff-unit {
-    width: calc((100% - 90px) / 4);
-    margin-right: 30px;
-}
-
-.advantages-unit:last-child,
-.staff-unit:last-child {
-    margin-right: 0;
+    flex-basis: calc((100% - 90px) / 4);
 }
 
 .advantages-title {
@@ -264,6 +269,7 @@ p {
     color: var(--main-text-color);
     font-weight: 700;
     line-height: 1.17;
+    font-size: 14px;
 }
 
 .advantages-description {
@@ -272,14 +278,10 @@ p {
 }
 
 .about-unit {
-    width: calc((100% - 60px) / 3);
-}
-.about-unit:not(:last-child) {
-    margin-right: 30px;
+    flex-basis: calc((100% - 60px) / 3);
 }
 
-.about .picture,
-.project-unit .picture {
+.picture {
     display: block;
 }
 
@@ -293,8 +295,6 @@ p {
 }
 
 .staff-unit {
-    padding-bottom: 30px;
-
     text-align: center;
 
     background-color: var(--white-color);
@@ -302,8 +302,9 @@ p {
     border-radius: 0px 0px 4px 4px;
 }
 
-.staff .picture {
-    margin-bottom: 30px;
+.staff .content {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .staff-name {
@@ -362,18 +363,7 @@ p {
 }
 
 .project-unit {
-    width: calc((100% - 60px) / 3);
-
-    margin-right: 30px;
-    margin-bottom: 30px;
-}
-
-.project-unit:nth-last-child(-n+3) {
-    margin-bottom: 0;
-}
-
-.project-unit:nth-child(3n) {
-    margin-right: 0;
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 .project-unit .project-content {
